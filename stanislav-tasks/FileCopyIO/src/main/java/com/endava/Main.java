@@ -1,19 +1,29 @@
 package com.endava;
 
 import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        String read = "C:\\internship\\EndavaHomework\\stanislav-tasks\\FileCopyIO\\src\\main\\resources\\dummy.txt";
-        String write = "C:\\internship\\EndavaHomework\\stanislav-tasks\\FileCopyIO\\src\\main\\resources\\dummy_copy.txt";
 
+    private void execute() {
         long initial, finish;
 
         initial = System.currentTimeMillis();
-        CopyFile.copyFile(read, write);
+
+        CopyFile.copyFile(getClass().getResource("/dummy.txt").getPath(), getClass().getResource("/dummy_copy.txt").getPath());
         finish = System.currentTimeMillis();
 
         System.out.println(finish - initial);
+    }
+
+    public static void main(String[] args) {
+
+        new Main().execute();
     }
 
 
