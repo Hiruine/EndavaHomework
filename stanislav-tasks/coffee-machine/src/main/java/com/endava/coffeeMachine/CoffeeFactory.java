@@ -7,11 +7,11 @@ import java.math.BigDecimal;
 
 public class CoffeeFactory {
 
-    public Coffee makeCoffee(CoffeeTypeComponents coffeeType) {
+    public Coffee createCoffee(CoffeeTypeComponents coffeeType) {
         switch (coffeeType) {
             case CAPPUCCINO: {
-                return new Cappuccino(CoffeeTypeComponents.CAPPUCCINO.toString(),
-                        BigDecimal.valueOf(10));
+                return new Cappuccino(/*CoffeeTypeComponents.CAPPUCCINO.toString(),
+                        BigDecimal.valueOf(10)*/);
             }
 
 

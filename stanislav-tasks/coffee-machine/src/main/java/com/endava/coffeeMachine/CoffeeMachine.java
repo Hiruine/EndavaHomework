@@ -11,7 +11,7 @@ public class CoffeeMachine {
 
     public Coffee orderCoffee(CoffeeTypeComponents type) {
         Coffee coffee;
-        coffee = factory.makeCoffee(type);
+        coffee = factory.createCoffee(type);
 
 
         coffee.prepareCoffee();
