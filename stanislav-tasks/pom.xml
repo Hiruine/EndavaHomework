@@ -15,6 +15,7 @@
         <module>CSV_ObjectCreate</module>
         <module>FileCopyIO</module>
         <module>JDBC</module>
+        <module>coffee-machine</module>
     </modules>
 
 

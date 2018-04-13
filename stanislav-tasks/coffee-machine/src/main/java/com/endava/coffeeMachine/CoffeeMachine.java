@@ -9,8 +9,14 @@ public class CoffeeMachine {
         this.factory = factory;
     }
 
-    public Coffee orderCoffee(String type) {
+    public Coffee orderCoffee(CoffeeTypeComponents type) {
         Coffee coffee;
         coffee = factory.makeCoffee(type);
+
+
+        coffee.prepareCoffee();
+
+        return coffee;
+
     }
 }
