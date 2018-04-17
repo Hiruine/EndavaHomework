@@ -11,6 +11,15 @@ import java.nio.file.Paths;
 
 public class tempMain {
     public static void main(String[] args) {
+        CoffeeTypeComponents.CAPPUCCINO.hasIngredients();
+
+    }
+
+}
+
+
+
+/*public static void main(String[] args) {
         Ingredients ingredients = new Ingredients(10, 100, 10, 100, 100);
 
         JsonbConfig config = new JsonbConfig()
@@ -29,6 +38,4 @@ public class tempMain {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-}
+    }*/

@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.channels.Channels;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Comparator;
 
 public enum CoffeeTypeComponents {
     //espresso ratio coffee-water 1:2
@@ -36,22 +37,40 @@ public enum CoffeeTypeComponents {
 
     public boolean hasIngredients() {
 
-        try (
-                Jsonb jsonb = JsonbBuilder.create();
-                Ingredients ingredients = jsonb.fromJson(
-                        Files.newInputStream(Paths.get(
-                                "stanislav-tasks\\coffee-machine"
-                                        + "\\src\\main\\resources\\Ingredients.json"),
-                                Ingredients.class))
-        ) {
+        try (Jsonb jsonb = JsonbBuilder.create()) {
+
+            Ingredients ingredients = jsonb.fromJson(
+                    Files.newInputStream(Paths.get(
+                            "/home/hiruine/programing/endava_internship2018/homework/EndavaHomework"
+                                    + "/stanislav-tasks/coffee-machine/src/main/resources/Ingredients.json")),
+                    Ingredients.class);
+
+            System.out.println(ingredients.toString());
+
+            System.out.println(this.isLessOrEqualTo(ingredients));
+
+            return this.isLessOrEqualTo(ingredients);
 
 
-            System.out.println();
 
         } catch (Exception e) {
             e.printStackTrace();
         }
         return true;
+    }
+
+
+    private boolean isLessOrEqualTo(Ingredients ingredients) {
+        if(
+                water <= ingredients.water &&
+                        (espresso / 2) <= ingredients.espresso &&
+                milk <= ingredients.milk &&
+                        chocolate <= ingredients.chocolate &&
+                        cream <= ingredients.cream
+        ) {
+            return true;
+        }
+        return false;
     }
 
 
