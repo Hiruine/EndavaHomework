@@ -1,10 +1,10 @@
-package com.endava.coffeeMachine.coffeeTypes;
-
-import com.endava.coffeeMachine.CoffeeTypeComponents;
-
-import java.math.BigDecimal;
-
-public class Cappuccino implements Coffee {
+//package com.endava.coffeeMachine.coffeeTypes;
+//
+//import com.endava.coffeeMachine.CoffeeTypeComponents;
+//
+//import java.math.BigDecimal;
+//
+//public class Cappuccino implements Coffee {
 //    private String coffeeType;
 //    private BigDecimal price;
 //    CoffeeTypeComponents coffeComponents;
@@ -17,14 +17,14 @@ public class Cappuccino implements Coffee {
 //
 //    //make an enum of types of coffee and types of ingredients
 //    hasIngredients()
-
-    @Override
-    public void prepareCoffee() {
-
-    }
-
-    @Override
-    public void getPrice() {
-
-    }
-}
+//
+//    @Override
+//    public void prepareCoffee() {
+//
+//    }
+//
+//    @Override
+//    public void getPrice() {
+//
+//    }
+//}
