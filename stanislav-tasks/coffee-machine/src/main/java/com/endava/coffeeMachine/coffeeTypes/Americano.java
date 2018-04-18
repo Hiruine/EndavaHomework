@@ -2,6 +2,7 @@ package com.endava.coffeeMachine.coffeeTypes;
 
 import com.endava.coffeeMachine.coffeeTypes.components.Ingredients;
 import com.endava.coffeeMachine.coffeeTypes.components.IngredientsDeserializer;
+import com.endava.coffeeMachine.coffeeTypes.components.IngredientsSerializer;
 
 import java.math.BigDecimal;
 
@@ -17,8 +18,9 @@ public class Americano implements Coffee {
 
     @Override
     public boolean hasIngredients() {
-        return ingredients
-                .isGreaterOrEqualTo(IngredientsDeserializer.deserializeIngredients());
+        return false; /*this.ingredients
+                .isLessOrEqualTo(IngredientsDeserializer
+                    .deserializeIngredients());*/
     }
 
     @Override
@@ -28,6 +30,11 @@ public class Americano implements Coffee {
 
     @Override
     public void prepareCoffee() {
+
+        IngredientsSerializer
+                .serializeIngredients(this.ingredients
+                        .updateIngredients(IngredientsDeserializer
+                                .deserializeIngredients()));
 
     }
 

@@ -2,25 +2,22 @@ package com.endava.coffeeMachine.coffeeTypes.components;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class IngredientsDeserializer {
-    public static Ingredients deserializeIngredients() {
+public class IngredientsSerializer {
+    public static void serializeIngredients(Ingredients ingredients) {
         try (Jsonb jsonb = JsonbBuilder.create()) {
 
-             return jsonb.fromJson(
-                    Files.newInputStream(Paths.get(
+             jsonb.toJson(
+                     ingredients, Ingredients.class,
+                     Files.newOutputStream(Paths.get(
                             "stanislav-tasks\\" +
                                     "coffee-machine\\src\\main\\resources\\" +
-                                    "Ingredients.json")),
-                    Ingredients.class);
-
+                                    "Ingredients.json"))
+                     );
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return null;
     }
 }

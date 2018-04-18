@@ -9,11 +9,13 @@ public class CoffeeMachine {
         this.factory = factory;
     }
 
-    public Coffee orderCoffee(CoffeeTypeComponents type) {
+    public Coffee orderCoffee(String type) {
         Coffee coffee;
         coffee = factory.createCoffee(type);
 
+        System.out.println(coffee.getPrice());
 
+        System.out.println(String.valueOf(coffee.hasIngredients()));
 
         coffee.prepareCoffee();
 

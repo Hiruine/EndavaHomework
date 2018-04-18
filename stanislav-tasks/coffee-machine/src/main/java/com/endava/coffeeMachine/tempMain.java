@@ -1,6 +1,8 @@
 package com.endava.coffeeMachine;
 
+
 import com.endava.coffeeMachine.coffeeTypes.components.Ingredients;
+import com.endava.coffeeMachine.coffeeTypes.components.IngredientsResupplier;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
@@ -11,7 +13,13 @@ import java.nio.file.Paths;
 
 public class tempMain {
     public static void main(String[] args) {
-        CoffeeTypeComponents.CAPPUCCINO.hasIngredients();
+
+        IngredientsResupplier.resupply();
+
+        CoffeeMachine coffeeMachine = new CoffeeMachine(new CoffeeFactory());
+        coffeeMachine.orderCoffee("americano");
+
+
 
     }
 
@@ -19,23 +27,6 @@ public class tempMain {
 
 
 
-/*public static void main(String[] args) {
-        Ingredients ingredients = new Ingredients(10, 100, 10, 100, 100);
-
-        JsonbConfig config = new JsonbConfig()
-                .withFormatting(true);
-
-        try(Jsonb jsonb = JsonbBuilder.create(config)) {
-
-            jsonb.toJson(
-                    ingredients,
-                    Files.newOutputStream(Paths.get(
-                            "stanislav-tasks\\coffee-machine"
-                                    + "\\src\\main\\resources\\Ingredients.json"))
-                    );
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }*/
+//    public static void main(String[] args) {
+//
+//}
