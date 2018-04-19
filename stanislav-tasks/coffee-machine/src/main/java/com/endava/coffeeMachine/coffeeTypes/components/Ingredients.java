@@ -1,6 +1,5 @@
 package com.endava.coffeeMachine.coffeeTypes.components;
 
-
 public class Ingredients {
     public double water;
     public double milk;
