@@ -6,11 +6,11 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class IngredientsSerializer {
-    public static void serializeIngredients(Ingredients ingredients) {
+    public static void serializeIngredients(Ingredients1 ingredients) {
         try (Jsonb jsonb = JsonbBuilder.create()) {
 
              jsonb.toJson(
-                     ingredients, Ingredients.class,
+                     ingredients, Ingredients1.class,
                      Files.newOutputStream(Paths.get(
                             "stanislav-tasks\\" +
                                     "coffee-machine\\src\\main\\resources\\" +

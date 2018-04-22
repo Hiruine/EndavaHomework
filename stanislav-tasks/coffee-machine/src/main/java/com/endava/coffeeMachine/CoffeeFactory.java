@@ -2,7 +2,7 @@ package com.endava.coffeeMachine;
 
 import com.endava.coffeeMachine.coffeeTypes.Americano;
 import com.endava.coffeeMachine.coffeeTypes.Coffee;
-import com.endava.coffeeMachine.coffeeTypes.components.Ingredients;
+import com.endava.coffeeMachine.coffeeTypes.components.BeverageTypeIngredients;
 
 import java.math.BigDecimal;
 
@@ -12,7 +12,7 @@ public class CoffeeFactory {
         switch (coffeeType) {
             case "americano": {
                 return new Americano(
-                        new Ingredients(120, 30, 0, 0, 0),
+                        BeverageTypeIngredients.AMERICANO,
                         BigDecimal.valueOf(10));
             }
 
