@@ -16,6 +16,7 @@
         <module>FileCopyIO</module>
         <module>JDBC</module>
         <module>coffee-machine</module>
+        <module>next-holiday-searcher</module>
     </modules>
 
 
