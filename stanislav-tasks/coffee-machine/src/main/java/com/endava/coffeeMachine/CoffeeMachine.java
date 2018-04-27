@@ -17,9 +17,14 @@ public class CoffeeMachine {
 
         System.out.println(String.valueOf(coffee.hasIngredients()));
 
-        coffee.prepareCoffee();
+
+        if (MoneyValidator.hasEnoughMoney(coffee.getPrice())) {
+            coffee.prepareCoffee();
+        }
+        else {
+            throw new RuntimeException("not enogh money");
+        }
 
         return coffee;
-
     }
 }
