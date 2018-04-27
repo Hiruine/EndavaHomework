@@ -21,6 +21,7 @@ public class Holidays {
     public Optional<LocalDate> nextHoliday(LocalDate date) {
 
         return holidays.stream()
+                .filter(t -> (t.getMonthValue() >= date.getMonthValue()))
                 .filter(t -> !(
                         t.getMonthValue() == date.getMonthValue()
                             && t.getDayOfMonth() <= date.getDayOfMonth()

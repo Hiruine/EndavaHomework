@@ -18,23 +18,24 @@ public class HolidayTest {
     public void theNextHolidayFromAGivenDate() {
 
         TreeSet<LocalDate> initial = new TreeSet<>();
-
-        initial.add(LocalDate.of(2018, 6, 1));
+        initial.add(LocalDate.of(2018, 6, 15));
         initial.add(LocalDate.of(2018, 5, 9));
         initial.add(LocalDate.of(2018, 5, 1));
+        initial.add(LocalDate.of(2018, 8, 27));
+        initial.add(LocalDate.of(2018, 8, 31));
 
         Holidays holidays = new Holidays(initial);
         Optional<LocalDate> optionalLocalDate =
-                holidays.nextHoliday(LocalDate.of(2018, 5, 5));
+                holidays.nextHoliday(LocalDate.of(2018, 6, 16));
 
 
         assertThat(optionalLocalDate)
-                .contains(LocalDate.of(2018, 5, 9));
-
+                .contains(LocalDate.of(2018, 8, 27));
     }
 
     @Test
     public void thereAreNoHolidaysFromAGivenDate() {
+
         TreeSet<LocalDate> initial = new TreeSet<>();
         initial.add(LocalDate.of(2018, 5, 9));
 
@@ -45,4 +46,6 @@ public class HolidayTest {
         assertThat(optionalLocalDate)
                 .isEmpty();
     }
+
+
 }
