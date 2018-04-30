@@ -16,21 +16,21 @@ public class Americano implements Coffee {
         this.price = price;
     }
 
-    @Override
+
     public boolean hasIngredients() {
         return false;/*this.ingredients
                 .isLessOrEqualTo(IngredientsDeserializer
                         .deserializeIngredients());*/
     }
 
-    @Override
+
     public BigDecimal getPrice() {
         return price;
     }
 
     @Override
     public void prepare() {
-        
+
 
 
 //        IngredientsSerializer
