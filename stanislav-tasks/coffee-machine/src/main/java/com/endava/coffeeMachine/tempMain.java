@@ -1,7 +1,7 @@
 package com.endava.coffeeMachine;
 
 
-import com.endava.coffeeMachine.coffeeTypes.components.IngredientsResupplier;
+import com.endava.coffeeMachine.components.IngredientsResupplier;
 
 public class tempMain {
     public static void main(String[] args) {

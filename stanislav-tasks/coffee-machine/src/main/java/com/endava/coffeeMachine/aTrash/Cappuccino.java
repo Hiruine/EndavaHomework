@@ -19,7 +19,7 @@
 //    hasIngredients()
 //
 //    @Override
-//    public void prepareCoffee() {
+//    public void prepare() {
 //
 //    }
 //

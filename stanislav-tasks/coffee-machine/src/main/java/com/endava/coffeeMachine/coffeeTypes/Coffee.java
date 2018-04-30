@@ -6,6 +6,6 @@ public interface Coffee {
 
     boolean hasIngredients();
     BigDecimal getPrice();
-    void prepareCoffee();
+    void prepare();
 
 }

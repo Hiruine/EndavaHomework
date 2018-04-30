@@ -1,8 +1,8 @@
 package com.endava.coffeeMachine.coffeeTypes;
 
-import com.endava.coffeeMachine.coffeeTypes.components.Ingredients;
-import com.endava.coffeeMachine.coffeeTypes.components.IngredientsDeserializer;
-import com.endava.coffeeMachine.coffeeTypes.components.IngredientsSerializer;
+import com.endava.coffeeMachine.components.Ingredients;
+import com.endava.coffeeMachine.components.IngredientsDeserializer;
+import com.endava.coffeeMachine.components.IngredientsSerializer;
 
 import java.math.BigDecimal;
 
@@ -29,13 +29,14 @@ public class Americano implements Coffee {
     }
 
     @Override
-    public void prepareCoffee() {
+    public void prepare() {
+        
 
-        IngredientsSerializer
-                .serializeIngredients(this.ingredients
-                        .updateIngredients(IngredientsDeserializer
-                                .deserializeIngredients()));
 
+//        IngredientsSerializer
+//                .serializeIngredients(this.ingredients
+//                        .withdrawIngredients(IngredientsDeserializer
+//                                .deserializeIngredients()));
     }
 
 }

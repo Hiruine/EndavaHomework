@@ -2,7 +2,7 @@
 //
 //public class Mocha implements Coffee {
 //    @Override
-//    public void prepareCoffee() {
+//    public void prepare() {
 //
 //    }
 //

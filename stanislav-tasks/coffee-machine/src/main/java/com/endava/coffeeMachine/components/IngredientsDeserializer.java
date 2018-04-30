@@ -1,4 +1,4 @@
-package com.endava.coffeeMachine.coffeeTypes.components;
+package com.endava.coffeeMachine.components;
 
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class IngredientsDeserializer {
-    public static Ingredients1 deserializeIngredients() {
+    public static Ingredients deserializeIngredients() {
         try (Jsonb jsonb = JsonbBuilder.create()) {
 
              return jsonb.fromJson(
@@ -14,7 +14,7 @@ public class IngredientsDeserializer {
                             "stanislav-tasks\\" +
                                     "coffee-machine\\src\\main\\resources\\" +
                                     "Ingredients.json")),
-                    Ingredients1.class);
+                    Ingredients.class);
 
         } catch (Exception e) {
             e.printStackTrace();

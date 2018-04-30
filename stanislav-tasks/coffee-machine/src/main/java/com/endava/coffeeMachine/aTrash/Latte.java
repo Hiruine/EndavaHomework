@@ -2,7 +2,7 @@
 //
 //public class Latte implements Coffee {
 //    @Override
-//    public void prepareCoffee() {
+//    public void prepare() {
 //
 //    }
 //

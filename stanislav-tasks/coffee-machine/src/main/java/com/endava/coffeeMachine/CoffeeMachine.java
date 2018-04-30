@@ -3,23 +3,22 @@ package com.endava.coffeeMachine;
 import com.endava.coffeeMachine.coffeeTypes.Coffee;
 
 public class CoffeeMachine {
-    CoffeeFactory factory;
+    private CoffeeFactory factory;
 
     public CoffeeMachine(CoffeeFactory factory) {
         this.factory = factory;
     }
 
     public Coffee orderCoffee(String type) {
-        Coffee coffee;
-        coffee = factory.createCoffee(type);
+        Coffee coffee = factory.createCoffee(type);
+        coffee.prepare();
 
-        System.out.println(coffee.getPrice());
-
-        System.out.println(String.valueOf(coffee.hasIngredients()));
+//        System.out.println(coffee.getPrice());
+//        System.out.println(String.valueOf(coffee.hasIngredients()));
 
 
         if (MoneyValidator.hasEnoughMoney(coffee.getPrice())) {
-            coffee.prepareCoffee();
+            coffee.prepare();
         }
         else {
             throw new RuntimeException("not enogh money");

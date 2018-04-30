@@ -1,8 +1,8 @@
 //package com.endava.coffeeMachine.coffeeTypes;
 //
-//public class Macchiato implements Coffee {
+//public class Espresso implements Coffee {
 //    @Override
-//    public void prepareCoffee() {
+//    public void prepare() {
 //
 //    }
 //
