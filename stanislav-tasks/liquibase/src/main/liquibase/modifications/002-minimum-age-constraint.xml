@@ -1,0 +1,13 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+                   logicalFilePath="002-minimum-age-constraint.xml">
+    <changeSet id="002" author="RaduMadiudin">
+        <sql>
+            alter table student
+            add constraint minimum_age check (age >= 18)
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

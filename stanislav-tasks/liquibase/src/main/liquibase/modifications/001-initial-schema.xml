@@ -1,0 +1,21 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd"
+                   logicalFilePath="001-initial-schema.xml">
+    <changeSet id="001" author="RaduMadiudin">
+        <sql>
+            create type sex as ENUM('M', 'F');
+        </sql>
+        <sql>
+            create table student(
+            id serial primary key,
+            name varchar(40),
+            age integer default 0 not null,
+            sex sex not null,
+            email varchar(255)
+            )
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
