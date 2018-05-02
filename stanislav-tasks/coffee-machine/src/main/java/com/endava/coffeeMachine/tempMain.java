@@ -1,6 +1,8 @@
 package com.endava.coffeeMachine;
 
 
+import com.endava.coffeeMachine.aTrash.CoffeeFactoryImpl;
+import com.endava.coffeeMachine.coffeeTypes.CoffeeType;
 import com.endava.coffeeMachine.components.IngredientsResupplier;
 
 public class tempMain {
@@ -8,8 +10,8 @@ public class tempMain {
 
         IngredientsResupplier.resupply();
 
-        CoffeeMachine coffeeMachine = new CoffeeMachine(new CoffeeFactory());
-        coffeeMachine.orderCoffee("americano");
+        CoffeeMachine coffeeMachine = new CoffeeMachine(new CoffeeFactoryImpl());
+        coffeeMachine.orderCoffee(CoffeeType.AMERICANO);
 
 
 
