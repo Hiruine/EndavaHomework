@@ -2,13 +2,14 @@ package com.endava.coffeeMachine;
 
 
 import com.endava.coffeeMachine.components.IngredientsResupplier;
+import com.endava.coffeeMachine.factory.Factory;
 
 public class tempMain {
     public static void main(String[] args) {
 
         IngredientsResupplier.resupply();
 
-        CoffeeMachine coffeeMachine = new CoffeeMachine(new CoffeeFactory());
+        CoffeeMachine coffeeMachine = new CoffeeMachine(new Factory());
         coffeeMachine.orderCoffee("americano");
 
 

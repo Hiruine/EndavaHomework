@@ -5,7 +5,7 @@ import com.endava.coffeeMachine.coffeeTypes.Coffee;
 public class CoffeeMachine {
     private CoffeeFactory factory;
 
-    public CoffeeMachine(CoffeeFactory factory) {
+    public CoffeeMachine(Factory factory) {
         this.factory = factory;
     }
 

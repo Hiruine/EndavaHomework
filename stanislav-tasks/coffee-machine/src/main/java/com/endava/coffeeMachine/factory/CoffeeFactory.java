@@ -7,11 +7,11 @@ import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-interface Factory {
+interface CoffeeFactory {
 
     Coffee createCoffee(String coffeeType);
 
-    static Factory factory(Consumer<Builder> consumer) {
+    static CoffeeFactory factory(Consumer<Builder> consumer) {
         Map<String, Supplier<Coffee>> map = new HashMap<>();
         consumer.accept(map::put);
         return coffeeType -> map.getOrDefault(coffeeType, () -> {
