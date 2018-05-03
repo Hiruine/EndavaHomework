@@ -17,6 +17,9 @@
         <module>JDBC</module>
         <module>coffee-machine</module>
         <module>next-holiday-searcher</module>
+        <module>JPA</module>
+        <module>liquibase</module>
+        <module>hibernate-experiment</module>
     </modules>
 
 
